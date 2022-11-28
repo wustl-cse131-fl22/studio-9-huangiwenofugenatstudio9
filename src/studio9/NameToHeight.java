@@ -20,8 +20,17 @@ public class NameToHeight {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 
-		// FIXME
-		throw new NotYetImplementedException();
-
+		HashMap<String, Integer> map = new HashMap<>();
+		String s = in.next();
+		while (!s.equals("quit")) {
+			int i = in.nextInt();
+			map.put(s, i);
+			s = in.next();
+		}
+		
+		for(String z: map.keySet()) {
+			int i = map.get(z);
+			System.out.println(z + "'s height is " + i);
+		}
 	}
 }
